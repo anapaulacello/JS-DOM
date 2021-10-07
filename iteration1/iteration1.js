@@ -18,3 +18,6 @@ let myTestMe=document.querySelectorAll('.testMe');
 myTestMe.forEach((element)=>{
     console.log(element.innerHTML);
 });
+
+//TODO
+//getAttribute(attributeName): Devuelve el valor del atributo con nombre attributeName
