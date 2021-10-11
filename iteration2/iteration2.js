@@ -5,7 +5,7 @@ window.onload=function(){
     addSixP();
     insertTxt();
     addApps();
-    /* borrar(); */
+    borrar();
     insertarEnMedio();
 }
 function addDiv(){
@@ -32,7 +32,7 @@ function addDiv(){
     var body = document.querySelector('body'); 
     body.appendChild(newDiv);
 }
-//TODO
+
 function addSixP(){
     let newDiv=document.createElement('div');
     newDiv.id = 'div-con-6p';
@@ -76,13 +76,15 @@ function addApps(){
     let body = document.querySelector('body'); 
     body.appendChild(newUl);
 }
-//TODO
-/* function borrar(){
-    let allNode=document.querySelectorAll('.parent');
-    while(allNode.f){
 
+ function borrar(){
+    let allNode=document.querySelectorAll('.fn-remove-me');
+    let i=0;
+    while(i<allNode.length){
+        allNode[i].remove();
+        i++;
     }
-} */
+} 
 
 function insertarEnMedio(){
     let newDivs=document.querySelectorAll('div');
