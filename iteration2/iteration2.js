@@ -6,6 +6,7 @@ window.onload=function(){
     insertTxt();
     addApps();
     borrar();
+    insertarEnMedioDiv();
     insertarEnMedio();
 }
 function addDiv(){
@@ -86,12 +87,25 @@ function addApps(){
     }
 } 
 
-function insertarEnMedio(){
+function insertarEnMedioDiv(){
     let newDivs=document.querySelectorAll('div');
-    for (const i of newDivs) {
+    let i=0;
+    while (i<newDivs.length) {
         let newp=document.createElement('p');
-        let newTxt=document.createTextNode(newDivs[i]);
+        let newTxt=document.createTextNode('Voy en medio!');
         newp.appendChild(newTxt);
-        newDivs.appendChild(newp);
+        newDivs[i].appendChild(newp);
+        i++;
+    }
+}
+function insertarEnMedio(){
+    let newDivs=document.querySelectorAll('.fn-insert-here');
+    let i=0;
+    while (i<newDivs.length) {
+        let newp=document.createElement('p');
+        let newTxt=document.createTextNode('Voy dentro!');
+        newp.appendChild(newTxt);
+        newDivs[i].appendChild(newp);
+        i++;
     }
 }
